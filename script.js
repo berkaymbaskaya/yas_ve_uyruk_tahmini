@@ -18,17 +18,19 @@ var newurl2=`${url2}${input.value}`;
 getResult(newurl1,newurl2);}
 })
 
+//entere basıldığında isim çekilerek API url'leri dinamik olarak oluşturuluyor.....
+
 function getResult(newurl1,newurl2){
 let data = fetch(newurl1)
 .then(response => response.json())
 .then(data => yasiniz.innerHTML= "Yaşınız: " + data[0].age )
-
+// yaş tahmini için API'den değer çekildi ve yazdırıldı....
 
 let data2 = fetch(newurl2)
 .then(cevap => cevap.json())
 .then( data2 => a= data2.country[0].country_id)
 .then( kaydet => ülke_adı(a))
-
+// ülke tahmini için API'den değer çekildi ancak API değeri ülke kodu olarak veriyor, başka bir API ile karşılaştırarak ülke kodundan ismini çekeceğiz....
 
 }
 
@@ -39,7 +41,7 @@ var data = fetch('https://gist.githubusercontent.com/erhan/74771d87a9707cde94b13
 .then(response => response.json())
 .then( data3 => searchResult = data3.find(s=> s.code == String(a)))
 .then( yazdır => ülkeniz.innerHTML= "Ülkeniz: " + searchResult.name )
-
+// ülk kodundan ülke ismi çekilde ve yazdırıldı...
 }
 getResult();
 ülke_adı();
