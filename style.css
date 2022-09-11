@@ -74,7 +74,26 @@
       object-position: 50% 50%;
       width: 75%;
       box-shadow: 0px 0px 8px rgb(247, 210, 0);
+    }
+@media only screen and (max-device-width:768px){
+
+      #cerceve{
+      width: 300%;
+      height: 100%;
+
+      }
+      .app{
+        margin-left: 35%;
+        margin-right: 35%;
+      }
+      #a{
+    height:50px;
+    margin-bottom: 50%;
     
-     ;
-    
+      }
+    .yazılar
+    {
+    width: 200%;
+    }
+
     }
